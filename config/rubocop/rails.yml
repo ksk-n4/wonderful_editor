@@ -1,3 +1,5 @@
+# Copy from https://github.com/onk/onkcop/blob/master/config/rails.yml
+
 Rails:
   Enabled: true
 
