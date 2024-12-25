@@ -7,4 +7,6 @@
 #  updated_at :datetime         not null
 #
 class ArticleLike < ApplicationRecord
+  belongs_to :user
+  belongs_to :article
 end
