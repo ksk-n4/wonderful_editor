@@ -60,3 +60,11 @@ RSpec/NestedGroups:
 # ブロックの方が見た目がスッキリして見やすいので、どちらでもお好きにどうぞ。
 RSpec/ReturnFromStub:
   Enabled: false
+
+# 複数の expect に対する警告を無効に
+RSpec/MultipleExpectations:
+  Enabled: false
+
+
+RSpec/LetSetup:
+  Enabled: false
