@@ -61,10 +61,10 @@ RSpec/NestedGroups:
 RSpec/ReturnFromStub:
   Enabled: false
 
-# 複数の expect に対する警告を無効に
+# it ごとに複数の expect を使えるように警告を無効にする
 RSpec/MultipleExpectations:
   Enabled: false
 
-
+# context ごとに複数の let! を使えるように警告を無効にする
 RSpec/LetSetup:
   Enabled: false
