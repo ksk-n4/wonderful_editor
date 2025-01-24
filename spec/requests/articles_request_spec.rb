@@ -112,7 +112,7 @@ RSpec.describe "Articles", type: :request do
 
       it "削除できない" do
         expect { subject }.to raise_error(ActiveRecord::RecordNotFound) &
-                              change { Article.count }.by(0)
+                              not_change { Article.count }
       end
     end
   end
