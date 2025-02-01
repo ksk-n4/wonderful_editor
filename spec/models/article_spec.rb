@@ -3,7 +3,7 @@
 # Table name: articles
 #
 #  id         :bigint           not null, primary key
-#  content    :text
+#  body       :text
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -19,7 +19,7 @@ RSpec.describe Article, type: :model do
   let!(:user) { build(:user) }
 
   context "必要な情報が揃っている場合" do
-    let(:article) { build(:article, title: "テスト", content: "テスト", user: user) }
+    let(:article) { build(:article, title: "テスト", body: "テスト", user: user) }
 
     it "記事が作成される" do
       expect(article).to be_valid

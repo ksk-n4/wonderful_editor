@@ -23,7 +23,7 @@ require "rails_helper"
 
 RSpec.describe Comment, type: :model do
   let!(:user) { build(:user) }
-  let!(:article) { build(:article, title: "テスト", content: "テスト", user: user) }
+  let!(:article) { build(:article, title: "テスト", body: "テスト", user: user) }
 
   context "必要な情報が揃っている場合" do
     let(:comment) { build(:comment, body: "テスト", user: user, article: article) }
