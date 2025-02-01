@@ -44,8 +44,8 @@ group :development, :test do
 end
 
 group :development do
-  gem "foreman"
   gem "annotate"
+  gem "foreman"
   gem "listen", "~> 3.3"
   gem "rails-erd"
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
