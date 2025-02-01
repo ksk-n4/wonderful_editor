@@ -44,6 +44,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "foreman"
   gem "annotate"
   gem "listen", "~> 3.3"
   gem "rails-erd"

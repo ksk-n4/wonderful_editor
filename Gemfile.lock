@@ -111,6 +111,7 @@ GEM
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
+    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -340,6 +341,7 @@ DEPENDENCIES
   devise_token_auth
   factory_bot_rails
   faker
+  foreman
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
