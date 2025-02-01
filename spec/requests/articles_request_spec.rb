@@ -30,7 +30,7 @@ RSpec.describe "Articles", type: :request do
 
         expect(res["id"]).to eq article.id
         expect(res["title"]).to eq article.title
-        expect(res["content"]).to eq article.content
+        expect(res["body"]).to eq article.body
         expect(res["updated_at"]).to eq article.updated_at.strftime("%Y-%m-%dT%H:%M:%S.%3NZ")
         expect(res["user"]["id"]).to eq article.user.id
       end
@@ -58,7 +58,7 @@ RSpec.describe "Articles", type: :request do
         expect { subject }.to change { Article.count }.by(1)
         res = JSON.parse(response.body)
         expect(res["title"]).to eq params[:article][:title]
-        expect(res["content"]).to eq params[:article][:content]
+        expect(res["body"]).to eq params[:article][:body]
         expect(response).to have_http_status(200)
       end
     end
@@ -76,7 +76,7 @@ RSpec.describe "Articles", type: :request do
 
       it "更新できる" do
         expect { subject }.to change { article.reload.title }.from(article.title).to(params[:article][:title]) &
-                              change { article.reload.content }.from(article.content).to(params[:article][:content])
+                              change { article.reload.body }.from(article.body).to(params[:article][:body])
         expect(response).to have_http_status(200)
       end
     end

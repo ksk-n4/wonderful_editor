@@ -3,7 +3,7 @@
 # Table name: articles
 #
 #  id         :bigint           not null, primary key
-#  content    :text
+#  body       :text
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -16,7 +16,7 @@
 FactoryBot.define do
   factory :article do
     title { Faker::Lorem.word }
-    content { Faker::Lorem.sentence }
+    body { Faker::Lorem.sentence }
     user
   end
 end
