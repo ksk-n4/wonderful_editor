@@ -4,6 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  body       :text
+#  status     :integer          default("draft")
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -19,4 +20,6 @@ class Article < ApplicationRecord
   has_many :article_likes, dependent: :destroy
 
   validates :title, presence: true
+
+  enum status: { draft: 0, published: 1 }
 end
