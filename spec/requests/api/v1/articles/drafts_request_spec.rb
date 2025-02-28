@@ -33,6 +33,7 @@ RSpec.describe "Api::V1::Articles::Drafts", type: :request do
       context "対象の記事が自分が書いた下書きのとき" do
         let(:article) { create(:article, :draft, user: current_user) }
 
+        # rubocop:disable RSpec/ExampleLength
         it "記事の詳細を取得できる" do
           subject
           res = JSON.parse(response.body)
@@ -46,6 +47,7 @@ RSpec.describe "Api::V1::Articles::Drafts", type: :request do
           expect(res["user"]["id"]).to eq article.user.id
           expect(res["user"].keys).to eq ["id", "name", "email"]
         end
+        # rubocop:enable RSpec/ExampleLength
       end
 
       context "対象の記事が他のユーザーが書いた下書きのとき" do
