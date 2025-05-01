@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## タイトル
 
-Things you may want to cover:
+### Wonderful Editor
+『Qiita風記事作成アプリ』
 
-* Ruby version
+## 概要
+記事を作成し、共有するためのアプリ
 
-* System dependencies
 
-* Configuration
+## 制作意図
+「実務を見据えたスキル学習」を意識して制作しました。 転職前に「試行錯誤する力」「わからないことを調べる力」「適切な質問ができる力」という自走力を磨くために注力してきました。 具体的には「学習段階では知らない概念や言葉が含まれているような指示をもとに、アプリを作る経験」がそれにあたります。基礎的な学習は行いましたが、実務で知らないことが出た際にどの様に問題解決できるか、このポートフォリオ作成を通してその練習をしました。 なので、このポートフォリオは私が実際に作って世に出したいというようなアプリではありません。そう言ったアプリは実務を通してスキルアップを図りながら作った方がより深い学習にもなると考えているからです。 ここまでやってきたのはあくまでも『実務を見据えた学習』であり、今回のポートフォリオもその一環です。
 
-* Database creation
+## 使用技術
+- Ruby 3.1.3
+- Ruby on Rails 6.1.7.1
+- Node 14.20.0
+- Vue.js: 2.6.11
+- DB: PostgresSQL
+- Docker/Docker-compose
+- Rspec
 
-* Database initialization
+## 機能一覧
+- 記事一覧機能（トップページ）
+- マイページ（自分が書いた記事の一覧）
 
-* How to run the test suite
+- ユーザー登録・サインイン/サインアウト
 
-* Services (job queues, cache servers, search engines, etc.)
+- 記事のCRUD（一覧以外）
+- 記事の下書き機能
 
-* Deployment instructions
-
-* ...
+## テスト
+- Rspec
+  - 単体テスト（Model）
+  - 結合テスト（Request）
+ 
+## ER図
+![スクリーンショット 2025-05-01 16 47 18](https://github.com/user-attachments/assets/d33650cf-358a-4043-97ff-d6c045b4892c)
